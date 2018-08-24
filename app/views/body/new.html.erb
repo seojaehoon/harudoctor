@@ -1,0 +1,30 @@
+<h1>신체 정보 입력</h1>
+<legend>몸무게</legend>
+    <form action="/body/create">
+    <input type="text" name="content">
+    <br>
+<legend>키</legend><input type="text" name="content">
+    <input type="submit">
+</from>  
+<form action = "#" accept-charset="utf-8" name = "person_info" method = "get">
+    <fieldset style = "width:150">
+    <legend>질병 입력</legend>
+        질병 : 천식<input type = "checkbox" name = "checkbox1" />
+        당뇨<input type = "checkbox" name = "checkbox2" />
+        디스크<input type = "checkbox" name = "checkbox3" /><br><br>
+
+    <input type = "submit" value = "입력"/>
+    <input type = "reset" value = "취소"/><br><br>
+    </fieldset> 
+    <fieldset style = "width:250">
+        <legend>복용중인 약이 있습니까?</legend>
+                    <select name = "city1">
+                        <optgroup label = "복용중인 약물">
+                            <option value = "yes">네</option>
+                            <option value = "no">아니요</option>
+                        </optgroup>
+                    </select>
+                    <br><br>
+                    <input type = "submit" value = "제출"/>
+                    <input type = "reset" value = "취소"/><br><br>
+            </fieldset>

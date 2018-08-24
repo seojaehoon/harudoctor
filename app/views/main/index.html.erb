@@ -1,0 +1,143 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" >
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none" style="font-family:Hanna;">HARU DOCTOR</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/img\doctor.jpg" style="width:128px;height:128px;" alt="">
+        </span>
+      </a>
+      <br><br><br><br><br>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+      <% if user_signed_in? %>
+      <li class="nav-item">
+          <a class="button" href="/users/sign_out">logout</a>
+          </li>
+      <% else %>
+        <li class="nav-item">
+          <a class="button" href="users/sign_in">login</a>
+          </li>
+          <br> 
+        <% end %>
+        <% if user_signed_in? %>
+        <% else %>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">하루닥터</a>
+          </li>
+          <% end %>
+          <% if user_signed_in? %>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experience">하루</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education" >건강</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">일일건강뉴스</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/users/mypage">마이페이지</a></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/home/index">인바디</a></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/posts">게시판</a></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/talk/index">Q&A</a></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/chat/index">채팅방</a></a>
+          </li>
+          <% else %>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid p-0">
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <div class="my-auto">
+         <% if user_signed_in? %>
+         <% else %>
+          <h2 class="mb-0" >하루닥터
+          </h2>
+          <div class="subheading mb-5" style=" font-size:1em">하루닥터는 당신의 건강을 위해 매일 최신의 정보들을 제공하는 웹 서비스입니다
+          </div>
+          <a >아직 로그인을 하지않으셨네요.</a><br>
+          <a >로그인하여 당신을 위한 최적의 정보를 받아보세요</a>
+          </div>
+      </section>
+      <% end %>
+      <% if user_signed_in? %>
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+        <div class="my-auto" >
+          <h2 class="mb-5">하루</h2>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">오늘의 날씨</h3>
+            <div class="resume-date text-md-right">
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Doctors Say</h3>
+            <div class="resume-date text-md-right">
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto" >
+              <h3 class="mb-0">약복용까지 남은시간</h3>
+            <div class="resume-date text-md-right">
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+        <div class="my-auto">
+          <h2 class="mb-5">건강</h2>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">추천식단</h3>
+             <body>
+              <table style="width:100%">
+              <tr>
+                <th>아침</th>
+                <th>점심</th> 
+                <th>저녁</th>
+              </tr>
+              <tr>
+                <td>쌀밥<br>된장국<br>가자미구이<br>메추리알조림<br>포기김치<br></td>
+                <td>쌀밥<br>소고기무국<br>알감자조림<br>오이양파무침<br>포기김치<br></td>
+                <td>쌀밥<br>들기름미역국<br>단무지무침<br>등뼈감자찜<br>포기김치<br></td>
+              </tr>
+              
+            </table>
+            </body>
+          </div>
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">도전음식</h3>
+            </div>
+            <div class="resume-date text-md-right">
+            </div>
+          </div>
+          <!-- d -->
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+        <div class="my-auto">
+          <h2 class="mb-5">일일뉴스</h2>
+        </div>
+      </section>
+
+    </div>
+    <% else %>
+    <% end %>

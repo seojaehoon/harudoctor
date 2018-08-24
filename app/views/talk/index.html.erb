@@ -1,0 +1,12 @@
+<div class=container>
+<h1>Q&A</h1>
+<form action="/talk/create">
+    <input type="text" name="content">
+    <input type="submit">
+</from>    
+<ul>
+    <% Talk.all.each do |c| %>
+        <li><%=c.is_man ? "Q" : "A" %> : <%=c.content%></li>
+    <% end %>
+</ul>
+</div>
